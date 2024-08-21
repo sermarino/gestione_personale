@@ -74,11 +74,16 @@ WSGI_APPLICATION = "gestione_personale_backend.wsgi.application"
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
 DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'gestione_personale',  	# Nome del database
+        'USER': 'marinose',           	# Utente creato in PostgreSQL
+        'PASSWORD': 'password',     	# Password dell'utente
+        'HOST': 'localhost',            # Di solito 'localhost'
+        'PORT': '5432',                 # Porta di default di PostgreSQL
     }
 }
+
 
 
 # Password validation
